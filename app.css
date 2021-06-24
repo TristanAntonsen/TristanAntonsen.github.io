@@ -1,0 +1,28 @@
+body {
+    /* margin:0px; */
+    /* this is common for people to do  */
+    background-color: black;
+    /* border: 3px solid blue; */
+    font-family: "Nunito"; 
+}
+h1 {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: gray;
+    font-size: 2em;
+    margin-top: 1em;
+    font-weight: 200;
+}
+h3 {
+    text-align: center;
+    color: gray;
+    font-size: .75em;
+    margin-top: 1em;
+    font-weight: 100;
+}
