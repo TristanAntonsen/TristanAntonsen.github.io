@@ -20,7 +20,14 @@ h2 {
     font-weight: 200;
 }
 
-
+li {
+    text-align: center;
+    color: gray;
+    font-size: 2em;
+    margin-top: 1em;
+    font-weight: 200;
+    list-style-type: none;
+}
 
 p {
     text-align: center;
