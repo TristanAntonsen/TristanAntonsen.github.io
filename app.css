@@ -1,5 +1,8 @@
 body {
+    /* margin:0px; */
+    /* this is common for people to do  */
     background-color: black;
+    /* border: 3px solid blue; */
     font-family: "Nunito"; 
 }
 h1 {
@@ -16,6 +19,9 @@ h2 {
     margin-top: 1em;
     font-weight: 200;
 }
+
+
+
 p {
     text-align: center;
     color: gray;
@@ -23,6 +29,8 @@ p {
     margin-top: 1em;
     font-weight: 200;
 }
+
+
 h3 {
     text-align: center;
     color: gray;
@@ -36,22 +44,56 @@ b {
 }
 
 #container h4 {
-    padding: 1em 10em;
+    padding: .5em 5em;
     text-align: right;
     color: gray;
+    font-size: 1em;
+    font-weight: lighter;
 }
 
-#container p {
-    padding: 1em 5em;
-    font-size: 2rem;
-    text-align: left;
-    color: gray;
+@media all {
+    #container p {
+        padding: 1em 5em;
+        font-size: 1em;
+        text-align: left;
+        color: gray;
+    }
+    #mvp {
+        width: 100%;
+    }
+    }
+
+@media (min-width:576px){
+    #container p {
+        padding: 1em 5em;
+        font-size: 1.5em;
+        text-align: left;
+        color: gray;
+    }
+    #container h4 {
+        padding: 1em 10em;
+    }
 }
+
+@media (min-width:992px){
+    #container p {
+        padding: 1em 5em;
+        font-size: 2em;
+        text-align: left;
+        color: gray;
+    }
+    #mvp {
+        width: 50%;
+    }
+    }
+
+
 
 nav a:hover {
     color: #ff5400;
     text-decoration: underline;
 }
+
 a {
     color: gray;
     text-decoration: underline;
@@ -60,3 +102,7 @@ a {
 a:hover {
     color: aqua;
 }
+#bottomtext {
+    margin-top: 5em;
+}
+
