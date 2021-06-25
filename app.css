@@ -19,10 +19,47 @@ h2 {
     margin-top: 1em;
     font-weight: 200;
 }
+p {
+    text-align: center;
+    color: gray;
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-weight: 200;
+}
 h3 {
     text-align: center;
     color: gray;
-    font-size: .75em;
+    font-size: 1em;
     margin-top: 1em;
     font-weight: 100;
+}
+
+b {
+    color: aqua;
+}
+
+#container h4 {
+    padding: 1em 10em;
+    text-align: right;
+    color: gray;
+}
+
+#container p {
+    padding: 1em 5em;
+    font-size: 2rem;
+    text-align: left;
+    color: gray;
+}
+
+nav a:hover {
+    color: #ff5400;
+    text-decoration: underline;
+}
+a {
+    color: gray;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: aqua;
 }
