@@ -67,9 +67,7 @@ b {
         text-align: left;
         color: gray;
     }
-    #mvp {
-        width: 100%;
-    }
+
     }
 
 @media (min-width:576px){
@@ -91,9 +89,6 @@ b {
         text-align: left;
         color: gray;
     }
-    #mvp {
-        width: 50%;
-    }
     }
 
 
@@ -113,5 +108,47 @@ a:hover {
 }
 #bottomtext {
     margin-top: 5em;
+}
+
+.entry1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    margin: 5em 0;
+}
+.entry2 {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+.entry3 {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mvp {
+    display: flex;
+    width: 50%;
+}
+ 
+#mandible {
+        width: 50%;
+}
+#lattice {
+        width: 50%;
+}
+.entry2 p {
+    width: 50%;
+    text-align: left;
+}
+.entry3 p {
+    width: 50%;
+    text-align: center;
 }
 
