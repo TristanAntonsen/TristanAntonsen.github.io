@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+.header {
+    position: absolute; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    top: 2em; 
+    /* left: 3em;  */
+    width: 100%; 
+    /* background-color: blue; */
+    padding: 0;
+}
+
+#mode {
+    padding: 0em 5em;
+    padding-bottom: 0.4em;
+    margin: 0;
+    color: black;
+    /* background-color: red; */
+    
+}
+
+#inputColor {
+    width: 25%;
+    /* background-color: red; */
+    /* padding: 0; */
+    /* margin: 0; */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#underlay {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+}
+/* canvas {background-color: black} */
