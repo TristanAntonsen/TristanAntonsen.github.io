@@ -79,7 +79,7 @@ function init() {
         1000
     );
     
-    camera.position.set(4,4,4);
+    camera.position.set(0,2.5,10);
     let darkMode = false;
     renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
     
