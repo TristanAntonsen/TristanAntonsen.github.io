@@ -134,7 +134,7 @@ function init() {
 
     // Binary files
     // const loader = new STLLoader();
-    // loader.load( 'models/aptivpartsmall.stl', function ( geometry ) {
+    // loader.load( 'models/text.stl', function ( geometry ) {
 
     //     const mesh = new THREE.Mesh( geometry, material );
     //     mesh.castShadow = true;
