@@ -79,7 +79,7 @@ function init() {
         1000
     );
     
-    camera.position.set(0,2.5,10);
+    camera.position.set(0,2.95,10);
     let darkMode = false;
     renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
     
@@ -103,11 +103,11 @@ function init() {
 
     let matColor = 0x06a7e2
     // const material = new THREE.MeshStandardMaterial( {color: matColor, map: texture} );
-    // const material = new THREE.MeshStandardMaterial( {color: inputMaterial} );
+    const material = new THREE.MeshStandardMaterial( {color: inputMaterial} );
 
     // let material = new THREE.MeshStandardMaterial();
-    // material.roughness = 0.75;
-    // material.metalness = 0.25;
+    material.roughness = 0.75;
+    material.metalness = 0.25;
 
     // material.shading = THREE.FlatShading;
     // material.shading = THREE.SmoothShading;
@@ -115,44 +115,47 @@ function init() {
 
     // TEST WIREFRAME
 
-    let material = new THREE.MeshPhongMaterial( {
-        // color: 0xff0000,
-        polygonOffset: true,
-        polygonOffsetFactor: 1, // positive value pushes polygon further away
-        polygonOffsetUnits: 1
-    } );
+    // let material = new THREE.MeshPhongMaterial( {
+    //     // color: 0xff0000,
+    //     polygonOffset: true,
+    //     polygonOffsetFactor: 1, // positive value pushes polygon further away
+    //     polygonOffsetUnits: 1
+    // } );
     
 
     // geometry
-    let size = 2;
-    // const geometry = new THREE.BoxGeometry( size, size, size );
-    const geometry = new THREE.SphereGeometry( size, 32,32 );
-    geo = new THREE.Mesh( geometry, material );
-    geo.position.set(0,size,0)
-    scene.add( geo );
+    // let size = 2;
+    // // const geometry = new THREE.BoxGeometry( size, size, size );
+    // const geometry = new THREE.SphereGeometry( size, 32,32 );
+    // geo = new THREE.Mesh( geometry, material );
+    // geo.position.set(0,size,0)
+    // scene.add( geo );
 
 
     // Binary files
-    // const loader = new STLLoader();
-    // loader.load( 'models/text.stl', function ( geometry ) {
+    const loader = new STLLoader();
+    loader.load( 'models/TA_Freezy2_small_blank.stl', function ( geometry ) {
 
-    //     const mesh = new THREE.Mesh( geometry, material );
-    //     mesh.castShadow = true;
-    //     mesh.receiveShadow = true;
+        const mesh = new THREE.Mesh( geometry, material );
+        mesh.rotation.x = -Math.PI / 2;
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
 
-    //     scene.add( mesh );
-    // // wireframe
-    //     let edges = new THREE.EdgesGeometry( mesh.geometry, 30 ); // or WireframeGeometry
-    //     let mat = new THREE.LineBasicMaterial( { color: 0xf6f6f6 } );
-    //     let wireframe = new THREE.LineSegments( edges, mat );
-    //     mesh.add( wireframe );
-    //     mesh.receiveShadow = true;
-    //     mesh.castShadow = true;
-    // } );
+        scene.add( mesh );
+    // wireframe
+        // let edges = new THREE.EdgesGeometry( mesh.geometry, 30 ); // or WireframeGeometry
+        // let mat = new THREE.LineBasicMaterial( { color: 0xf6f6f6 } );
+        // let wireframe = new THREE.LineSegments( edges, mat );
+        // mesh.add( wireframe );
+        // mesh.receiveShadow = true;
+        // mesh.castShadow = true;
+    } );
 
     // controls
     controls = new OrbitControls( camera, renderer.domElement  )
-    
+    const yVal = 3;
+    controls.target.set(0, yVal, 0)
+  
     // lights
     const color = 0xFFFFFF;
     const warm = 0xffffea;
@@ -162,12 +165,12 @@ function init() {
 
     const intensity = 1;
 
-    const light = new THREE.AmbientLight(color, intensity*0);
+    const light = new THREE.AmbientLight(purple, intensity*0);
     const light1 = new THREE.DirectionalLight(warm,intensity*.1);
     // const light1 = new THREE.HemisphereLight(warm,intensity*.01);
     // const light2 = new THREE.DirectionalLight(purple, intensity*4);
     // const light3 = new THREE.DirectionalLight(blue, intensity*2);
-    const light2 = new THREE.DirectionalLight(cool, intensity);
+    const light2 = new THREE.DirectionalLight(purple, intensity);
     const light3 = new THREE.DirectionalLight(color, intensity);
     
     const span = 3
@@ -202,9 +205,11 @@ function init() {
     // scene.add( pointLightHelper4 );
 
     // grid
-    const gridSize = 25;
-    const divisions = 50;
-    const gridHelper = new THREE.GridHelper( gridSize, divisions, 0x005675,0x353535);
+    const gridSize = 50;
+    const divisions = 25;
+    // const gridColor = 0x353535;
+    const gridColor = 0xfe00dd;
+    const gridHelper = new THREE.GridHelper( gridSize, divisions, gridColor,gridColor);
 
     scene.add( gridHelper );
 
