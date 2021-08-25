@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app3D.css">
+    
+    <title>Dashboard</title>
+</head>
+
+<body background="img/LincolnPark_blur40px.jpg">
+
+    <div class="container-3">
+        <div class="sidebar">
+            <div class="items">
+                <div class="item">About</div>
+                <div class="item">Portfolio</div>
+                <div class="item">Fun stuff</div>
+                <div class="item" id="selected">3D Viewer</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="scene" id="scene3d">
+                <div class="sceneTarget" id="scene3dTarget"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="mainGlass.js"></script>
+</body>
+
+</html>
